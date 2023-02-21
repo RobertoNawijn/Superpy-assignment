@@ -51,6 +51,7 @@ with open ("sold.csv", mode="w") as csvfile:
 with open ("inventory.csv", mode="w") as csvfile:
     writer=csv.writer(csvfile, delimiter=",", lineterminator='\n')
     writer.writerow(["product_name", "count", "buy_price", "expiration_date"])
+    print(writer.writerow)
 
 #Alles van bought.csv moet in inventory.csv, en alles van sold.csv moet uit inventory.csv,
 #net als dat alle expired products uit inventory.csv moeten.
@@ -61,7 +62,13 @@ with open ("inventory.csv", mode="w") as csvfile:
 
 #Using pandas
 #work on the csv data with pandas, ad to inventory etc
+
 #HIER OPSCHRIJVEN WELKE ACTIES JE WIL ONDERNEMEN!!
+
+#Wat je koopt op CL moet in bought.csv verschijnen, en automatisch op inventory_lijst
+#komen. Dan in inventory_lijst moet alles wat verkocht wordt op CL 
+# in sold.csv terechtkomen en automatisch verdwijnen van inventory_lijst.
+# Ook moeten alle producten expired verdwijnen van inventory_lijst
 
 
 df=pd.read_csv("bought.csv")
